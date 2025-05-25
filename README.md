@@ -54,7 +54,7 @@ python -m venv name
 source name/bin/activate
 
 # Windows
-mvaakai\Scripts\activate
+name\Scripts\activate
 
 # Install dependencies
 pip install --upgrade pip
