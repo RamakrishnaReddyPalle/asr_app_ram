@@ -1,4 +1,4 @@
-# 🇮🇳 Hindi Automatic Speech Recognition (ASR) using NeMo + ONNX + FastAPI
+# Hindi Automatic Speech Recognition (ASR) using NeMo + ONNX + FastAPI
 
 This project is an end-to-end **Hindi ASR pipeline** leveraging NVIDIA's [`NeMo`](https://developer.nvidia.com/nemo) models, optimized via **ONNX**, and deployed using **FastAPI**. It provides high-performance speech-to-text transcription with support for CPU inference and Dockerized deployment.
 
