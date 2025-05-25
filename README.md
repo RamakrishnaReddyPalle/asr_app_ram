@@ -6,7 +6,7 @@ This project is an end-to-end **Hindi ASR pipeline** leveraging NVIDIA's [`NeMo`
 
 ## 📌 Overview
 
-We use the pretrained **`stt_hi_conformer_ctc_medium.nemo`** model from NVIDIA NeMo (v1.6.0), optimized through several ONNX configurations. The best-performing model is automatically selected and deployed via a FastAPI application. The project supports:
+I used the pretrained **`stt_hi_conformer_ctc_medium.nemo`** model from NVIDIA NeMo (v1.6.0), optimized through several ONNX configurations. The best-performing model is automatically selected and deployed via a FastAPI application. The project supports:
 
 - Inference optimization using ONNX Runtime
 - FastAPI-based deployment with Swagger docs
@@ -18,17 +18,17 @@ We use the pretrained **`stt_hi_conformer_ctc_medium.nemo`** model from NVIDIA N
 
 ## 🔽 Step 1: Download the Pretrained NeMo Model
 
-We use NVIDIA’s **`stt_hi_conformer_ctc_medium.nemo`**, a Hindi ASR model trained with Conformer architecture using CTC loss.
+Used NVIDIA’s **`stt_hi_conformer_ctc_medium.nemo`**, a Hindi ASR model trained with Conformer architecture using CTC loss.
 
 ### 🐧 Linux/macOS:
 ```bash
-bash download_model.sh
+bash download_model_linux_macOS.sh
 ````
 
 ### 🪟 Windows (via Python):
 
 ```bash
-python download_model.py
+python download_model_windows.py
 ```
 
 This will download and place the model in the `model/` directory:
@@ -73,12 +73,13 @@ Launch and execute the notebook to:
 * Automatically save the best-performing model as:
 
 ```bash
-model/best_optimized_onnx_model.onnx
+jupyter notebook onnx_optimizer.ipynb
 ```
 
 ```bash
-jupyter notebook onnx_optimizer.ipynb
+model/best_optimized_onnx_model.onnx
 ```
+
 
 📊 Optimization results will be plotted:
 
@@ -107,7 +108,7 @@ Open [http://localhost:8000/docs](http://localhost:8000/docs) for Swagger UI:
 #### 📬 Sample CURL request:
 
 ```bash
-curl -X POST http://localhost:8000/transcribe \
+curl -X POST http://localhost:8000/transcribe/
   -F "file=@example.wav"
 ```
 
