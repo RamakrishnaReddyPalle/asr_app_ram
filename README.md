@@ -84,7 +84,7 @@ model/best_optimized_onnx_model.onnx
 📊 Optimization results will be plotted:
 
 <p align="center">
-  <img src="assets/inference_plot.png" width="600">
+  <img src="assets/inference_plot.png" style="width:100%; max-width:100%;">
 </p>
 
 ---
@@ -99,24 +99,11 @@ uvicorn app:app --host 0.0.0.0 --port 8000
 
 #### 🔍 API Docs
 
-Open [http://localhost:8000/docs](http://localhost:8000/docs) for Swagger UI:
-
-<p align="center">
-  <img src="assets/docs_test.png" width="800">
-</p>
-
-#### 📬 Sample CURL request:
-
-```bash
-curl -X POST http://localhost:8000/transcribe/
-  -F "file=@example.wav"
-```
+Open [http://localhost:8000/docs](http://localhost:8000/docs) for Swagger UI
 
 #### 📮 Sample Postman test:
 
-<p align="center">
-  <img src="assets/postman_test.png" width="800">
-</p>
+Open [http://localhost:8000/transcribe/](http://localhost:8000/transcribe/) for testing using postman (POST)
 
 ---
 
@@ -149,15 +136,9 @@ docker run -p 8000:8000 hindi-asr-app
 
 ## 📎 Notes
 
-* Only `.wav` files between **5–10 seconds** are accepted for inference
+* Only files between **5–10 seconds** are accepted for inference
 * Ensure model file is always placed in `/model/` directory
 * This app can be extended for multilingual transcription, diarization, or streaming
-
----
-
-## 🤝 Contributing
-
-Feel free to fork and contribute — open issues or pull requests are welcome!
 
 ---
 
