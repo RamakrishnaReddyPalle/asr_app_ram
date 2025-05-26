@@ -144,9 +144,7 @@ docker run -p 8000:8000 hindi-asr-app
 
 ## 📜 License
 
-This project uses open-source licenses. Refer to `LICENSE` for more details.
-
-
+This project uses open-source licenses.
 
 
 
